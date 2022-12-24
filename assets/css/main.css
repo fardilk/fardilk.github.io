@@ -3956,17 +3956,25 @@ input, select, textarea {
 	max-height: 200px;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
-	float: left;
-	width: 33.33%;
-	padding: 10px;
-	height: 300px; /* Should be removed. Only for demonstration */
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-	content: "";
-	display: table;
-	clear: both;
-  }
+@media only screen and (min-width: 1025px) {
+	.imgleft {
+		/*...your desktop-only style...*/
+		margin-top: 40px; 
+		padding-left: 2em;"
+	}
+
+	.imgright {
+		margin-top: 40px; 
+		padding-right: 3em;"
+	}
+} 
+
+.wrapped {
+	flex-wrap:wrap;
+	padding-bottom: 3em; 
+}
+
+@media only screen and (max-width: 1400px) {
+	ul.actions li {
+		padding: 0.75em 0 0 1em;
+	}
